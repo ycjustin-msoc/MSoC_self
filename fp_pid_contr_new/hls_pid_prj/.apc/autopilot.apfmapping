@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="xapp_pid.cpp" path="D:\R03943135\MSOC\self\HLx_Examples\DSP\fp_pid_contr_new\C\xapp_pid.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_xapp_pid.cpp" path="D:\R03943135\MSOC\self\HLx_Examples\DSP\fp_pid_contr_new\C\test_xapp_pid.cpp"/>
+    <originFiles name="test_data" path="D:\R03943135\MSOC\self\HLx_Examples\DSP\fp_pid_contr_new\C\test_data"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

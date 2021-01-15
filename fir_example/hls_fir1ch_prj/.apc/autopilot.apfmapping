@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.cpp" path="D:\R03943135\MSOC\self\HLx_Examples\DSP\fir_example\fir.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="data" path="D:\R03943135\MSOC\self\HLx_Examples\DSP\fir_example\data"/>
+    <originFiles name="fir_test.cpp" path="D:\R03943135\MSOC\self\HLx_Examples\DSP\fir_example\fir_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

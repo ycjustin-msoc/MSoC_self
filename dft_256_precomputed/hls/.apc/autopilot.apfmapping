@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="dft.h" path="D:\R03943135\MSOC\self\pp4fpgas\labs\DFT\dft_256_precomputed\dft.h"/>
+    <originFiles name="dft.cpp" path="D:\R03943135\MSOC\self\pp4fpgas\labs\DFT\dft_256_precomputed\dft.cpp"/>
+    <originFiles name="coefficients256.h" path="D:\R03943135\MSOC\self\pp4fpgas\labs\DFT\dft_256_precomputed\coefficients256.h"/>
+  </source>
+  <testbench>
+    <originFiles name="out.gold.dat" path="D:\R03943135\MSOC\self\pp4fpgas\labs\DFT\dft_256_precomputed\out.gold.dat"/>
+    <originFiles name="dft_test.cpp" path="D:\R03943135\MSOC\self\pp4fpgas\labs\DFT\dft_256_precomputed\dft_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

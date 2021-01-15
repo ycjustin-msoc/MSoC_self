@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="cholesky_inverse.cpp" path="D:\R03943135\MSOC\self\cholesky_inverse\cholesky_inverse.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="cholesky_inverse_tb.cpp" path="D:\R03943135\MSOC\self\cholesky_inverse\cholesky_inverse_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

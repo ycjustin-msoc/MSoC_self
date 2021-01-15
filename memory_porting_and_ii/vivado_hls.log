@@ -1,0 +1,84 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'hecaslab' on host 'desktop-72ou1bp' (Windows NT_amd64 version 6.2) on Sun Dec 20 23:21:27 +0800 2020
+INFO: [HLS 200-10] In directory 'D:/R03943135/MSOC/self/memory_porting_and_ii'
+Sourcing Tcl script 'D:/R03943135/MSOC/self/memory_porting_and_ii/proj_memory_porting_and_ii/solution3/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'D:/R03943135/MSOC/self/memory_porting_and_ii/proj_memory_porting_and_ii'.
+INFO: [HLS 200-10] Adding design file 'matrixmul.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'matrixmul_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'D:/R03943135/MSOC/self/memory_porting_and_ii/proj_memory_porting_and_ii/solution3'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'matrixmul.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 185.840 ; gain = 92.418
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 185.840 ; gain = 92.418
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.840 ; gain = 92.418
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.840 ; gain = 92.418
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'matrixmul' (matrixmul.cpp:94).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'I_LOOP' (matrixmul.cpp:103) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'J_LOOP' (matrixmul.cpp:104) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'K_LOOP' (matrixmul.cpp:107) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'I_LOOP' (matrixmul.cpp:103) in function 'matrixmul' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'J_LOOP' (matrixmul.cpp:104) in function 'matrixmul' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'K_LOOP' (matrixmul.cpp:107) in function 'matrixmul' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'a' (matrixmul.cpp:94) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b' (matrixmul.cpp:95) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res' (matrixmul.cpp:96) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.840 ; gain = 92.418
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.840 ; gain = 92.418
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrixmul'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_0_load_2', matrixmul.cpp:110) on array 'a_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'matrixmul' consists of the following:
+	'mul' operation of DSP[75] ('mul_ln110_8', matrixmul.cpp:110) [74]  (3.36 ns)
+	'add' operation of DSP[75] ('add_ln110_4', matrixmul.cpp:110) [75]  (3.02 ns)
+	'add' operation of DSP[76] ('add_ln110_5', matrixmul.cpp:110) [76]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.205 seconds; current allocated memory: 101.409 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.109 seconds; current allocated memory: 101.845 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/res_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/res_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/res_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmul' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrixmul_mac_muladd_8s_8s_16ns_16_1_1' to 'matrixmul_mac_mulbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_mac_muladd_8s_8s_16s_16_1_1' to 'matrixmul_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_mac_mulbkb': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_mac_mulcud': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul'.
+INFO: [HLS 200-111]  Elapsed time: 0.189 seconds; current allocated memory: 102.756 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 185.840 ; gain = 92.418
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmul.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmul.
+INFO: [HLS 200-112] Total elapsed time: 7.74 seconds; peak allocated memory: 102.756 MB.

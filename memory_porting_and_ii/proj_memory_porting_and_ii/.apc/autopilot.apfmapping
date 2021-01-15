@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrixmul.cpp" path="D:\R03943135\MSOC\self\memory_porting_and_ii\matrixmul.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="matrixmul_test.cpp" path="D:\R03943135\MSOC\self\memory_porting_and_ii\matrixmul_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

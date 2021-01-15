@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'matrixmul' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[75] ('mul_ln110_8', matrixmul.cpp:110) [74]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[75] ('add_ln110_4', matrixmul.cpp:110) [75]  (3.02 ns)&#xD;&#xA;&#x9;'add' operation of DSP[76] ('add_ln110_5', matrixmul.cpp:110) [76]  (3.02 ns)" projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:33.442+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:33.438+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_0_load_2', matrixmul.cpp:110) on array 'a_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a_0'." projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:33.425+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'K_LOOP' (matrixmul.cpp:107) because its parent loop or function is pipelined." projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:33.166+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'J_LOOP' (matrixmul.cpp:104) because its parent loop or function is pipelined." projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:33.160+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'I_LOOP' (matrixmul.cpp:103) because its parent loop or function is pipelined." projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:33.151+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release." projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:28.593+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement." projectName="proj_memory_porting_and_ii" solutionName="solution3" date="2020-12-20T23:21:28.529+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release." projectName="proj_memory_porting_and_ii" solutionName="solution2" date="2020-12-20T23:06:19.993+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement." projectName="proj_memory_porting_and_ii" solutionName="solution2" date="2020-12-20T23:06:19.974+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_1', matrixmul.cpp:110) on array 'a' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a'." projectName="proj_memory_porting_and_ii" solutionName="solution1" date="2020-12-20T23:02:01.848+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release." projectName="proj_memory_porting_and_ii" solutionName="solution1" date="2020-12-20T23:01:57.095+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement." projectName="proj_memory_porting_and_ii" solutionName="solution1" date="2020-12-20T23:01:57.085+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
